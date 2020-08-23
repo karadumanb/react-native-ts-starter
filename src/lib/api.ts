@@ -5,7 +5,7 @@ const fallbackError: AxiosError = {
   code: '404',
   name: '',
   message:
-    'Servisimiz şu anda hizmet vermemektedir. Lütfen daha sonra tekrar deneyiniz.',
+    'Our service is currently unavailable. Please try again later.',
   isAxiosError: true,
   config: null,
   response: {
@@ -13,9 +13,9 @@ const fallbackError: AxiosError = {
     headers: null,
     config: null,
     data:
-      'Servisimiz şu anda hizmet vermemektedir. Lütfen daha sonra tekrar deneyiniz.',
+      'Our service is currently unavailable. Please try again later.',
     statusText:
-      'Servisimiz şu anda hizmet vermemektedir. Lütfen daha sonra tekrar deneyiniz.',
+      'Our service is currently unavailable. Please try again later.',
   },
   toJSON: () => null,
 };
@@ -27,7 +27,7 @@ axios.defaults.headers = {
 };
 
 class Api {
-  static host = `https://saglikpaylasimlari.com/wp-json/wp/v2`;
+  static host = `https://api`;
 
   static setHeaders = (token: string) => {
     axios.defaults.headers = {
